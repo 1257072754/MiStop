@@ -4,7 +4,7 @@
 
 瀑布流商品列表
 
-[image](https://user-images.githubusercontent.com/35132042/227987944-b115d420-b4c5-4d94-a2eb-088a2ac258cb.png)
+![image](https://user-images.githubusercontent.com/35132042/227987944-b115d420-b4c5-4d94-a2eb-088a2ac258cb.png)
 
 分类列表
 
