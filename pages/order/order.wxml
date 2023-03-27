@@ -1,0 +1,57 @@
+<!--pages/order/order.wxml-->
+<view class="navOrder">
+    <view class="{{index == 0?'con':''}}" bindtap="setIndex" data-index="0">全部订单</view>
+    <view class="{{index == 1?'con':''}}" bindtap="setIndex" data-index="1">待支付</view>
+    <view class="{{index == 2?'con':''}}" bindtap="setIndex" data-index="2">待发货</view>
+    <view class="{{index == 3?'con':''}}" bindtap="setIndex" data-index="3">待收货</view>
+    <view class="{{index == 4?'con':''}}" bindtap="setIndex" data-index="4">待评价</view>
+</view>
+
+
+<view class="orderList">
+    <view class="order" 
+    wx:for="{{orderLists}}" 
+    wx:for-index="i" 
+    wx:key="*this"
+    wx:if="{{item.type == index || index == 0}}">
+
+        <view class="h1">
+            ID：{{item.orderId}} - {{item.type}}-{{i}}
+            <text wx:if="{{item.type == 1}}">待支付</text>
+            <text wx:elif="{{item.type == 2}}">待发货</text>
+            <text wx:elif="{{item.type == 3}}">待收货</text>
+            <text wx:elif="{{item.type == 4}}">待评价</text>
+        </view>
+        <view class="goodslist" 
+        wx:for="{{item.orderList}}"
+        wx:for-index="key"
+        wx:for-item="value"
+        wx:key="{{key}}"
+        >
+            <view class="left">
+                <image src="{{value.goodsImage}}"></image>
+            </view>
+            <view class="right">
+                <view class="goods_name">
+                    <text>{{value.goodsName}}</text>
+                </view>
+                <view class="goods_price">
+                    <text>￥{{value.goodsPrice}}</text>
+                </view>
+                <view class="car">
+                    X{{value.num}}
+                </view>
+            </view>
+        </view>
+        <view class="bottom">
+            <view class="fl">总价格:<text>￥{{item.total}}</text></view>
+            <view class="fr">
+                <view class="btn" wx:if="{{item.type == 1}}">前往支付</view>
+                <view class="btn" wx:if="{{item.type == 3}}">已收货</view>
+                <view class="btn" wx:if="{{item.type == 4}}">待评价</view>
+            </view>
+        </view>
+    </view>
+    
+
+</view>

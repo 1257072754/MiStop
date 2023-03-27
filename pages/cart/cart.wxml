@@ -1,0 +1,49 @@
+<!--pages/cart/cart.wxml-->
+
+<view class="commonTitle">
+    <switch type="checkbox" checked="{{select_all}}" bindchange="allSelect" class="interestthreecheckbox" /><text>小米自营</text>
+</view>
+
+<view class="goodswrap" wx:for="{{goodsList}}" wx:key="*this">
+
+    <view class="goodslist">
+        <view class="left">
+            <switch checked="{{item.checked}}" data-id="{{item.id}}" bindchange="selectSingle" type="checkbox" class="interestthreecheckbox" />
+        </view>
+
+        <view class="right">
+            <view class="img">
+                <image src="{{item.goodsImage}}"></image>
+            </view>
+            <view class="shopInfo">
+                <view class="goods_name">
+                    <text>{{item.goodsName}}</text>
+                </view>
+                <view class="goods_price">
+                    <text>￥{{item.goodsPrice}}</text>
+                    <text class="account">￥{{item.goodsPriceOld}}</text>
+                </view>
+
+            </view>
+        </view>
+        <view class="cart">
+            <image src="../../images/shanchu.png" data-index="{{index}}" bindtap="del"></image>
+        </view>
+    </view>
+    <view class="btn">
+        <text class="redbtn" bindtap="reduce" data-index="{{index}}">-</text>
+        <text class="count">{{item.num}}</text>
+        <view class="addbtn" bindtap="add" data-index="{{index}}">+</view>
+    </view>
+</view>
+<view class="bottomCart" wx:if="{{goodsList.length!=0}}">
+    <view class="warp">
+        总价：<text>￥{{totalData}}</text>
+        <view class="order" bindtap="allprice" bindtap="goOrder">下单</view>
+    </view>
+</view>
+
+<view class="goodsNull" wx:if="{{!goodsList.length}}">
+    <image src="../../images/car.png"></image>
+    <view>赶快去看看什么要买的</view>
+</view>

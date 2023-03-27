@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "l-demo": "../../components/demo/demo",
+        "l-water-flow": "../../miniprogram_npm/lin-ui/water-flow/index",
+        "tabBar": "../../components/tabBar/tabBar"
+    },
+    "navigationBarTitleText": "小米之家"
+}

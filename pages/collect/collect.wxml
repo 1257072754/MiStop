@@ -1,0 +1,27 @@
+<!--pages/collect/collect.wxml-->
+<view class="nav">
+    <view class="nav_item {{index==0?'con':''}}" data-index="0" bindtap="changeData">商品收藏</view>
+    <view class="nav_item {{index==1?'con':''}}" data-index="1" bindtap="changeData">品牌收藏</view>
+    <view class="nav_item {{index==2?'con':''}}" data-index="2" bindtap="changeData">店铺收藏</view>
+    <view class="nav_item {{index==3?'con':''}}" data-index="3" bindtap="changeData">游览足迹</view>
+</view>
+
+
+
+<view class="goodslist" wx:for="{{renderData}}" wx:key="index">
+    <view class="left">
+        <image src="{{item.goodsImage}}"></image>
+    </view>
+    <navigator url="/pages/detail/detail?id={{item.id}}" hover-class="none" class="right">
+        <view class="goods_name">
+            <text>{{item.goodsName}}</text>
+        </view>
+
+        <view class="goods_price">
+            <text>￥{{item.goodsPrice}}</text>
+        </view>
+        <view class="car">
+            <image src="/images/car.png"></image>
+        </view>
+    </navigator>
+</view>

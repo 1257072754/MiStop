@@ -1,0 +1,89 @@
+<!--pages/details/details.wxml-->
+<!--pages/details/details.wxml-->
+<!-- 轮播图 -->
+<view class="banner">
+    <swiper bindchange="bindchangeFun" style="height: {{swiperHeight}}px;">
+        <!-- wx:for index item -->
+        <block wx:for="{{imgs}}" wx:key="*this">
+            <swiper-item>
+                <image mode="widthFix" bindload="bindloadFun" src="{{item.img_url_webp}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="indicator">
+        {{current}}/{{imgs.length}}
+    </view>
+</view>
+
+
+<view class="infos">
+    <view class="content">
+        <view class="price">
+            <text class="ss">￥</text>{{goods.price}}<text class="oldprice">￥40000</text>
+        </view>
+        <view class="title">
+            {{goods.name}}
+        </view>
+        <view class="dl">
+            <!-- 处理后台富文本框 -->
+            <!-- 处理后台富文本框 -->
+            <!-- <rich-text nodes="{{goods.goodsContent}}"></rich-text> -->
+            <view class="dt">{{product_info.product_desc_ext}}</view>
+            <view class="dd" wx:for="{{product_info.sell_point_desc}}" wx:key="*this">1.{{item}}</view>
+        </view>
+    </view>
+</view>
+
+<view class="details">
+    <view class="tabs">
+        <view class="{{ tabIndex== 1?'con':''}}" data-tagindex="1" bindtap="toggleTab">商品详情</view>
+        <view class="{{ tabIndex== 2?'con':''}}" data-tagindex="2" bindtap="toggleTab">商品评论</view>
+    </view>
+
+    <!-- <view class="goodsDetails" wx:if="{{tabIndex==1}}">
+        <block wx:for="{{goodsDetails[0].page_info}}" wx:key="*this">
+            <image src="{{item.body.img_url_webp}}" mode="widthFix"></image>
+        </block>
+    </view>
+    <view class="goodsDetails"  wx:else>
+        <block wx:for="{{goodsDetails[1].page_info}}" wx:key="*this">
+            <image src="{{item.body.img_url_webp}}" mode="widthFix"></image>
+        </block>
+    </view> -->
+</view>
+
+
+<!-- 底部按钮 -->
+<view class="buttons">
+    <navigator url="/pages/home/home" open-type="reLaunch" class="home">
+        <image src="/images/shouye1.png"></image>
+    </navigator>
+
+    <div bindtap="goCart"  class="car">
+        <view class="img">
+            <view class="num">{{num}}</view>
+            <image src="/images/car1.png"></image>
+        </view>
+    </div>
+
+    <view class="collect">
+        <view class="box" bindtap="setCollect">
+            <block wx:if="{{collect==false}}">
+                <view class="iconfont icon-favor"></view>
+                <view class="text">未收藏</view>
+            </block>
+            <block wx:else>
+                <view class="iconfont icon-favorfill"></view>
+                <view class="text">取消收藏</view>
+            </block>
+
+        </view>
+    </view>
+
+    <view class="setCar" bindtap="setCarNum">
+        加入购物车
+    </view>
+    <view class="pay" bindtap="imBuy">
+        立即购买
+    </view>
+</view>

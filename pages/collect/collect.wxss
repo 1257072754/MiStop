@@ -1,0 +1,63 @@
+/* pages/collect/collect.wxss */
+.nav{
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  padding: 0 40rpx;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.nav .con{
+  color: #ef6d77;
+}
+
+
+.goodslist{
+    display: flex;
+    padding: 20rpx 0px;
+    background-color: #fff;
+    margin-bottom: 2rpx;
+}
+.goodslist .left{
+    width: 240rpx;
+    text-align: center;
+}
+.goodslist .right{
+    /* 剩下宽度分配给右侧 */
+    flex:1;
+    height: 200rpx;
+    /* 相对定位 */
+    position: relative;
+    margin-right: 20rpx;
+}
+
+.goodslist .left image{
+    width: 200rpx;
+    height: 200rpx;
+    margin: 0 auto;
+}
+.goodslist .right image{
+    width: 44rpx;
+    height: 44rpx;
+}
+.goodslist .right .goods_name{
+    font-size: 36rpx;
+    color:#808080;
+    height: 100rpx;
+    /* 溢出隐藏 */
+    overflow: hidden;
+}
+.goodslist .right .goods_address{
+    font-size: 24rpx;
+    color:#929292;
+}
+.goodslist .right .goods_price{
+    font-size: 30rpx;
+    margin-top: 40rpx;
+    color:#FF1493;
+}
+.goodslist .right .car{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}

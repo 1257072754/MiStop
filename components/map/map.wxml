@@ -1,0 +1,15 @@
+<!--components/map/map.wxml-->
+<view class="wrap">
+<view class="top">
+  <map wx:if="{{markersStatus}}" class="map" id="myMap" scale="{{scale}}" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{datatlist}}" bindregionchange="mapChange" show-location='true'>
+  </map>
+</view>
+<view class="bottom">
+  <view class="address">{{address?address:'获取不到位置信息'}}</view>
+  <view class="nav-panel">
+    <view class="iconfont icon-locationfill" bindtap="getCenterLocation"></view>
+  </view>
+</view>
+
+<view class="usebtn" bindtap="userAddr">使用该地址</view>
+</view>

@@ -1,0 +1,49 @@
+/* pages/map/map.wxss */
+.top{
+  width: 100vw;
+  height: 80vh;
+}
+.top .map{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.bottom{
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom .address{
+  flex: 1;
+}
+
+.bottom .nav-panel{
+  width: 50rpx;
+  height: 50rpx;
+}
+/* .bottom image{
+  width: 40rpx;
+  height: 40rpx; 
+  height: 100%;
+  width: 100%;
+  background-size:100%;
+} */
+
+.usebtn{
+  padding: 0 13rpx;
+  width: 100rpx;
+  height: 40rpx;
+  border: 1px solid #777777;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #777777;
+  color: #fff;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  font-size: 20rpx;
+}

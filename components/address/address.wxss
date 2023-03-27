@@ -1,0 +1,104 @@
+.addressWrap {
+  padding: 20rpx 26rpx 20rpx 26rpx;
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 500;
+}
+
+.wrap {
+
+  background-color: #fff;
+  border-radius: 40rpx;
+  padding: 40rpx 32rpx;
+  width: 100%;
+  box-sizing: border-box;
+  /* height: 256rpx; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  margin-bottom: 40rpx;
+}
+
+.wrap .left {
+  display: flex;
+
+}
+
+.wrap .left .label {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60rpx;
+  background: #fee4db;
+  overflow: hidden;
+  color: #f1a988;
+}
+
+.wrap .right {
+  margin-left: 20rpx;
+  flex: 1;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap .right .top {
+  /* flex: 1; */
+  width: 500rpx;
+  /* white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; */
+  word-wrap: break-word;
+  /* word-break: break-all; */
+}
+
+.wrap .right .top .name {
+  max-width: 500rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 40rpx;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 10rpx;
+
+}
+
+.wrap .right .top .phone {
+  font-size: 24rpx;
+
+  color: #d9d9d9;
+  display: inline-block
+}
+
+.wrap .right .area,
+.address {
+  font-size: 26rpx;
+  display: inline-block;
+  color: #333333;
+
+}
+
+.wrap .right image {
+
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.wrap .btn {
+  text-align: center;
+  font-size: 24rpx;
+  padding: 0 20rpx;
+  width: 20rpx;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  border: 1px solid #d9d9d9;
+  border-radius: 40rpx;
+ 
+}

@@ -1,0 +1,23 @@
+<!--components/tabBar/tabBar.wxml-->
+
+<view class="tabBar">
+    <navigator url="/pages/home/home" hover-class="none" class="item {{index==0?'con':''}}">
+        <view class="iconfont icon-shouye"></view>
+        <text>首页</text>
+    </navigator>
+    <navigator url="/pages/category/category" hover-class="none" class="item {{index==1?'con':''}}">
+        <view class="iconfont icon-fenlei"></view>
+        <text>分类</text>
+    </navigator>
+    <navigator url="/pages/cart/cart" hover-class="none" class="item {{index==2?'con':''}}">
+        <view class="iconfont icon-gouwuche"></view>
+        <text>购物车</text>
+    </navigator>
+    <navigator url="/pages/my/my" hover-class="none" class="item {{index==3?'con':''}}">
+        <view class="iconfont icon-wode"></view>
+        <text>我的</text>
+    </navigator>
+</view>
+<button bindtap="getDataAA">按钮调用父组件</button>
+<!-- 1.home.json配置组件才可以使用 -->
+<!-- 2.home.wxml引入组件 -->

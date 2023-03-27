@@ -1,0 +1,42 @@
+<!--pages/pay/pay.wxml-->
+<l-c-addr wx:if="{{showAddress}}" bind:closeMask="closeMk" bind:getAddress="useAddr" userAddress="{{addrArr}}"></l-c-addr>
+<view class="address" bindtap="goAddress">
+    <image src="/images/icon-dw.png" class="iconAddress" ></image>
+    <view class="pay_content">
+        <view class="name">
+            <text>{{addressInfo.name}}</text>
+            <text>{{addressInfo.phone}}</text>
+        </view>
+        <view class="dw">
+           {{addressInfo.consigneeRegion}}{{addressInfo.detailedAddress}}
+        </view>
+    </view>
+    <image src="/images/icon-arrow.png" class="iconArrow"></image>
+</view>
+
+
+<view class="goodslist" wx:for="{{goodsList}}" wx:key="*this">
+    <view class="left">
+        <image src="{{item.goodsImage}}"></image>
+    </view>
+    <view class="right">
+        <view class="goods_name">
+            <text>{{item.goodsName}}</text>
+        </view>
+        <view class="goods_price">
+            <text>￥{{item.goodsPrice}}</text>
+        </view>
+        <view class="car">
+            X{{item.num}}
+        </view>
+    </view>
+</view>
+
+<!-- 底部价格 -->
+
+<view class="bottomNav">
+    <view class="warp">
+        总价格:<text>￥{{totalData}}</text>
+        <view class="order" bindtap="goOrder">支付</view>
+    </view>
+</view>

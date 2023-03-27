@@ -1,0 +1,27 @@
+/* components/tabBar/tabBar.wxss */
+
+@import "/font/iconfont.wxss";
+
+.tabBar{
+    display: flex;
+    background-color: #fff;
+}
+.tabBar .item{
+    flex: 1;
+    text-align: center;
+}
+.tabBar .item.con .iconfont{
+    color:#FF6900
+}
+.tabBar .item.con text{
+    color:#FF6900
+}
+.tabBar .item .iconfont{
+    font-size: 60rpx;
+    color:#A7A7A7;
+}
+.tabBar .item text{
+    display: block;
+    font-size: 24rpx;
+    color:#A7A7A7;
+}

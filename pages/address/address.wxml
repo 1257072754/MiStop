@@ -1,0 +1,32 @@
+<!--pages/address/address.wxml-->
+<!-- <l-address></l-address> -->
+
+
+<view class="addressWrap">
+  <view class="wrap" wx:for="{{addressList}}" wx:key="*this">
+    <view class="left">
+      <view class="label">
+        {{item.label}}
+      </view>
+    </view>
+    <view class="right">
+      <view>
+
+        <view class="top">
+          <view class="name">  {{item.name}}</view>
+          <view class="phone">{{item.phone}}</view>
+        </view>
+        <view class="bottom">
+          <view class="area">{{item.consigneeRegion}}</view>
+          <view class="address">{{item.detailedAddress}}</view>
+        </view>
+      </view>
+      <image src="../../images/shanchu.png" data-uuid="{{item.uuid}}" bindtap="del"></image>
+    </view>
+  </view>
+</view>
+<view class="bottomCart">
+  <navigator url="../addaddress/addaddress" class="newAdd">
+    新增地址
+  </navigator>
+</view>

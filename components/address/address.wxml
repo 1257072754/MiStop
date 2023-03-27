@@ -1,0 +1,26 @@
+<l-mask show="{{true}}" opacity="0.7" bind:lintap="closeMk">
+  <view class="addressWrap">
+    <view class="wrap" wx:for="{{userAddress}}" wx:key="*this">
+
+      <view class="left">
+        <view class="label">
+          {{item.label}}
+        </view>
+      </view>
+      <view class="right">
+        <view>
+
+          <view class="top">
+            <view class="name"> {{item.name}}</view>
+            <view class="phone">{{item.phone}}</view>
+          </view>
+          <view class="bottom">
+            <view class="area">{{item.consigneeRegion}}</view>
+            <view class="address">{{item.detailedAddress}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="btn" data-uuid="{{item.uuid}}" catchtap="choiceAddr">使用</view>
+    </view>
+  </view>
+</l-mask>

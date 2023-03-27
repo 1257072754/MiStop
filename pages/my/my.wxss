@@ -1,0 +1,43 @@
+/* pages/my/my.wxss */
+.info{
+  padding:40rpx 0px;
+  background-color: #fff;
+  text-align: center;
+}
+.info .photo {
+  width: 180rpx;
+  height: 180rpx;
+  margin:0 auto;
+  border-radius: 50%;
+}
+.info .photo  image{
+  width: 180rpx;
+  height: 180rpx;
+  /* 边变成园 */
+  border-radius: 50%; 
+}
+.info .nickname{
+  font-size: 36rpx;
+  margin-top: 20rpx;
+}
+.ul{
+  border-top: 1px solid #e5e5e5;
+  margin-top: 40rpx;
+  background-color: #fff;
+}
+.ul .li{
+  border-bottom: 1px solid #e5e5e5;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  text-indent: 1em;
+  position: relative;
+}
+.ul .li image{
+  position: absolute;
+  top:13px;
+  right:20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
